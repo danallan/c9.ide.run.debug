@@ -33,6 +33,9 @@
  * @property {String} path  The path of the file where this frame begins.
  */
 /**
+ * @property {Boolean} absent  Whether the original source is absent on the system.
+ */
+/**
  * @property {String} sourceId  The id of the source file related to this frame.
  */
 /**
@@ -74,9 +77,9 @@ define(function(require, exports, module) {
     
     Frame.prototype = new Data(
         [
-            "id", "index", "name", "column", "ref", "line", 
-            "path", "sourceId", "sourcemap", "istop"
-        ], 
+            "id", "index", "name", "column", "ref", "line",
+            "path", "sourceId", "sourcemap", "istop", "absent"
+        ],
         ["variables", "scopes"]
     );
     

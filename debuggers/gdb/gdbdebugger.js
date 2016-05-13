@@ -123,6 +123,7 @@ define(function(require, exports, module) {
                 script: file,
                 path: "/" + frame.relative,
                 sourceId: file,
+                absent: !frame.exists,
                 istop: (i === 0),
                 variables: variables
             });

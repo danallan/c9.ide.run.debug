@@ -420,6 +420,7 @@ define(function(require, exports, module) {
         }
         
         function showDebugFrame(frame, callback) {
+            if (frame.absent) return;
             openFile({
                 scriptId: frame.sourceId,
                 line: frame.line - 1,
@@ -430,6 +431,7 @@ define(function(require, exports, module) {
         }
     
         function showDebugFile(script, row, column, callback) {
+            if (frame.absent) return;
             openFile({
                 scriptId: script.id,
                 line: row, 
